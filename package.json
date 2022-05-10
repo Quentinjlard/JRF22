@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A Quasar Project",
   "productName": "JRF 2022",
-  "author": "Tehcam <tehcam42@gmail.com>",
+  "author": "MIRAGE",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
