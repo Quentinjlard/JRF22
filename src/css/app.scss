@@ -1,1 +1,13 @@
 // app global css in SCSS form
+
+@font-face {
+    font-family: customtitle;
+    src: url(./fonts/WaterBrush-Regular.ttf);
+}
+
+.m-title {
+    font-family: customtitle;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 90%;
+}

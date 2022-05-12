@@ -1,5 +1,8 @@
 <template>
-    <div>
+    <div class="q-pa-none">
+        <div class="q-py-lg q-px-sm text-h5 text-primary text-center m-title">
+            Découvrez le programme de l'événement
+        </div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perspiciatis unde accusantium quibusdam odit ea tempore molestias atque, expedita, reprehenderit nesciunt nisi aliquid nihil aut corporis. Nostrum dolorem repudiandae iusto.
     </div>
 </template>
