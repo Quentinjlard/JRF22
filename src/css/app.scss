@@ -1,12 +1,12 @@
 // app global css in SCSS form
 
 @font-face {
-    font-family: customtitle;
-    src: url(./fonts/WaterBrush-Regular.ttf);
+    font-family: Poppins;
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 }
 
 .m-title {
-    font-family: customtitle;
+    font-family: Poppins;
     font-weight: bold;
     letter-spacing: 3px;
     line-height: 90%;

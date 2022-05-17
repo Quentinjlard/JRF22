@@ -42,7 +42,7 @@
         </q-tab-panel>
       </q-tab-panels>
     </div>
-    <div class="full-width bg-primary text-info q-pa-lg m-mentions_container">
+    <div class="full-width bg-primary text-info q-pa-lg m-mentions_container text-center">
       <div>
         <div class="q-px-sm m-mentions_section">
           <div class="text-h6">Mentions légales</div>
