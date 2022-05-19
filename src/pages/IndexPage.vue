@@ -42,7 +42,7 @@
         </q-tab-panel>
       </q-tab-panels>
     </div>
-    <div class="full-width bg-primary text-info q-pa-lg m-mentions_container text-center">
+    <div class="full-width bg-primary text-info q-pa-lg m-mentions_container">
       <div>
         <div class="q-px-sm m-mentions_section">
           <div class="text-h6">Mentions légales</div>
@@ -52,10 +52,9 @@
           <div class="text-h6">Liens</div>
           <div>
             <ul id="m-links">
-              <li class="cursor-pointer m-link"><a href="#">Réseau FIGURE</a></li>
-              <li class="cursor-pointer m-link"><a href="#">Cursus Master en Ingénierie</a></li>
-              <li class="cursor-pointer m-link"><a href="#">Alumni</a></li>
-              <li class="cursor-pointer m-link"><a href="#">MIRAGE - CMI Reims</a></li>
+              <li v-for="link in links" :key="link.id" class="cursor-pointer m-link">
+                <a :href="link.link">{{ link.label }}</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -64,9 +63,9 @@
           <div>
             <div class="m-contacts">
               <b>Adresse: </b>Ville,<br>
-              &nbsp;&nbsp;Rue<br>
-              &nbsp;&nbsp;Cedex<br>
-              &nbsp;&nbsp;FRANCE
+              &nbsp;Rue<br>
+              &nbsp;Cedex<br>
+              &nbsp;FRANCE
             </div>
             <div class="m-contacts">
               <b>Mail: </b>mail@exemple.com
@@ -90,6 +89,29 @@ import MPictures from 'src/components/MPictures.vue'
 import MProgram from 'src/components/MProgram.vue'
 
 const slide = ref('index')
+
+const links = ref([
+  {
+    id: 1,
+    link: '#',
+    label: 'Réseau FIGURE'
+  },
+  {
+    id: 2,
+    link: '#',
+    label: 'Cursus Master en Ingénierie'
+  },
+  {
+    id: 3,
+    link: '#',
+    label: 'Alumni'
+  },
+  {
+    id: 4,
+    link: '#',
+    label: 'MIRAGE - CMI Reims'
+  },
+])
 </script>
 
 <style lang="scss">
