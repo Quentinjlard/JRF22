@@ -2,12 +2,11 @@
 
 @font-face {
     font-family: customtitle;
-    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    src: url('./fonts/Poppins-MediumItalic.ttf');
 }
 
 .m-title {
     font-family: customtitle;
-    font-weight: bold;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     line-height: 90%;
 }

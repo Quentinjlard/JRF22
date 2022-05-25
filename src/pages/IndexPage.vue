@@ -15,9 +15,11 @@
         <q-tab name="program" icon="insert_chart" v-else />
         <q-img
           src="icons/favicon-32x32.png"
-          height="32px"
-          width="32px"
-          class="q-mx-md"
+          height="36px"
+          width="36px"
+          class="q-mx-md bg-accent"
+          :img-style="{ width: '28px', height: '28px', position: 'relative', top: '50%', left: '50%', transform: 'translateX(-50%) translateY(-50%)' }"
+          style="border-radius: 50%"
         />
         <q-tab name="pay" label="S'inscrire" v-if="Screen.width > 500" />
         <q-tab name="pay" icon="credit_card" v-else />
@@ -27,7 +29,7 @@
 
       <q-separator />
 
-      <q-tab-panels v-model="slide" animated :transition-duration="300" swipeable infinite style="min-height: 100vh">
+      <q-tab-panels v-model="slide" animated :transition-duration="300" :swipeable="Platform.has.touch" infinite style="min-height: 100vh">
         <q-tab-panel name="index" class="q-pa-none m-content_slide">
           <m-index />
         </q-tab-panel>
@@ -82,7 +84,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Screen } from 'quasar'
+import { Screen, Platform } from 'quasar'
 import MIndex from 'src/components/MIndex.vue'
 import MPay from 'src/components/MPay.vue'
 import MPictures from 'src/components/MPictures.vue'
@@ -119,10 +121,12 @@ const links = ref([
   position: relative;
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
 }
 
 .m-mentions_section {
-  margin: 0 0 0 1.5rem;
+  margin: 1.5rem 0 0 0;
+  max-width: 190px;
 }
 
 #m-links,
@@ -141,13 +145,14 @@ const links = ref([
   color: $secondary;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 682px) {
   .m-mentions_container > div {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .m-mentions_section {
-    margin: 1.5rem 0 0 0;
+    margin: 0 0 0 1.5rem;
   }
 }
 </style>
