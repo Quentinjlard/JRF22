@@ -132,8 +132,9 @@ const links = ref([
 #m-links,
 .m-link {
   list-style: none;
-  padding: 0;
+  padding: 4px 0;
   margin: 0;
+  line-height: 100%;
 }
 
 .m-link a {
@@ -149,6 +150,7 @@ const links = ref([
   .m-mentions_container > div {
     flex-direction: row;
     justify-content: center;
+    gap: 2em;
   }
 
   .m-mentions_section {
