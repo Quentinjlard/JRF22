@@ -23,7 +23,7 @@
                                 </q-card-section>
                                 <q-separator />
                                 <q-card-section>
-                                    <GMapMap :center="{lat: 51, lng: 6}" />
+                                    <GMapMap :center="event.location" :zoom="8" />
                                 </q-card-section>
                             </q-card>
                         </q-dialog>
