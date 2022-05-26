@@ -4,7 +4,8 @@ export interface Event {
     subtitle: string,
     side: 'left' | 'right' | undefined,
     icon: string | undefined,
-    content: string
+    content: string,
+    dialog: boolean
 }
 
 export type Planning = Event[]
@@ -16,7 +17,8 @@ export const mercredi: Planning = [
         subtitle: '8h00',
         side: 'right',
         icon: undefined,
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        dialog: false
     },
     {
         id: 1,
@@ -24,7 +26,8 @@ export const mercredi: Planning = [
         subtitle: '8h30',
         side: 'left',
         icon: 'save',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        dialog: false
     },
     {
         id: 2,
@@ -32,7 +35,8 @@ export const mercredi: Planning = [
         subtitle: '8h30 - 10h30',
         side: 'right',
         icon: undefined,
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        dialog: false
     },
     {
         id: 3,
@@ -40,7 +44,8 @@ export const mercredi: Planning = [
         subtitle: '10h30',
         side: 'left',
         icon: 'save',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        dialog: false
     },
     {
         id: 4,
@@ -48,7 +53,8 @@ export const mercredi: Planning = [
         subtitle: '10h55 - 11h55',
         side: 'right',
         icon: undefined,
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        dialog: false
     },
     {
         id: 5,
@@ -56,7 +62,8 @@ export const mercredi: Planning = [
         subtitle: '12h00 - 13h45',
         side: 'left',
         icon: 'save',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        dialog: false
     },
     {
         id: 6,
@@ -64,7 +71,8 @@ export const mercredi: Planning = [
         subtitle: '14h00 - 17h30',
         side: 'right',
         icon: undefined,
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        dialog: false
     },
     {
         id: 7,
@@ -72,7 +80,8 @@ export const mercredi: Planning = [
         subtitle: '18h00',
         side: 'left',
         icon: 'save',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        dialog: false
     },
     {
         id: 8,
@@ -80,7 +89,8 @@ export const mercredi: Planning = [
         subtitle: '20h00',
         side: 'right',
         icon: undefined,
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        dialog: false
     }
 ]
 

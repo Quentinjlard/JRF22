@@ -12,14 +12,21 @@
                     <div class="m-event">
                         {{ event.content }}
                     </div>
-                    <q-btn flat dense label="En savoir plus" color="accent">
-                        <q-popup-proxy>
+                    <q-btn flat dense label="En savoir plus" color="accent" @click="event.dialog = !event.dialog">
+                        <q-dialog v-model="event.dialog">
                             <q-card>
+                                <q-card-actions align="right">
+                                    <q-btn v-close-popup round flat icon="cancel" color="primary"/>
+                                </q-card-actions>
                                 <q-card-section>
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. At odit est, eum consectetur numquam possimus corporis molestiae cum, reprehenderit, eveniet harum dignissimos sapiente saepe ipsam a earum omnis blanditiis! Optio!
                                 </q-card-section>
+                                <q-separator />
+                                <q-card-section>
+                                    <GMapMap :center="{lat: 51, lng: 6}" />
+                                </q-card-section>
                             </q-card>
-                        </q-popup-proxy>
+                        </q-dialog>
                     </q-btn>
                 </q-timeline-entry>
                 <q-timeline-entry heading tag="h4" class="text-primary">
