@@ -2,6 +2,8 @@
 .thumbs.db
 node_modules
 
+google-maps-api-key.js
+
 # Quasar core related directories
 .quasar
 /dist
