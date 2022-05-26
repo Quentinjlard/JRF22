@@ -22,8 +22,8 @@
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. At odit est, eum consectetur numquam possimus corporis molestiae cum, reprehenderit, eveniet harum dignissimos sapiente saepe ipsam a earum omnis blanditiis! Optio!
                                 </q-card-section>
                                 <q-separator />
-                                <q-card-section>
-                                    <GMapMap :center="event.location" :zoom="8" />
+                                <q-card-section style="height: 300px; width: 560px">
+                                    <GMapMap :center="event.location" :zoom="8"/>
                                 </q-card-section>
                             </q-card>
                         </q-dialog>
@@ -71,5 +71,10 @@ const layout = computed(() => {
 
 .q-timeline__title {
     color: $primary
+}
+
+.vue-map-container {
+    height: 100%;
+    width: 100%;
 }
 </style>
