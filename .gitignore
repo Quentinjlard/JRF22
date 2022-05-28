@@ -2,7 +2,7 @@
 .thumbs.db
 node_modules
 
-variables.env.js
+variables.js
 
 # Quasar core related directories
 .quasar
