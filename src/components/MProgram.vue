@@ -12,19 +12,32 @@
                     <div class="m-event">
                         {{ event.content }}
                     </div>
-                    <q-btn flat dense label="En savoir plus" color="accent" @click="event.dialog = !event.dialog">
+                    <q-btn flat dense label="En savoir plus" color="accent" @click="() => { event.dialog = !event.dialog; expanded = false }">
                         <q-dialog v-model="event.dialog">
-                            <q-card>
-                                <q-card-actions align="right">
-                                    <q-btn v-close-popup round flat icon="cancel" color="primary"/>
+                            <q-card style="position: relative">
+                                <q-card-actions class="absolute-top-right" style="z-index: 5">
+                                    <q-btn v-close-popup round flat icon="cancel" color="negative"/>
                                 </q-card-actions>
-                                <q-card-section>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. At odit est, eum consectetur numquam possimus corporis molestiae cum, reprehenderit, eveniet harum dignissimos sapiente saepe ipsam a earum omnis blanditiis! Optio!
-                                </q-card-section>
-                                <q-separator />
-                                <q-card-section style="height: 300px; width: 560px">
+                                <q-card-section style="min-height: 150px; max-height: 350px; height: 35vh; width: 100%" class="bg-grey-3 q-pa-none">
                                     <GMapMap :center="event.location" :zoom="8"/>
                                 </q-card-section>
+                                <q-separator />
+                                <q-card-section>
+                                    <div class="text-subtitle2 text-secondary" style="line-height: 70%">{{ event.subtitle }}</div>
+                                    <div class="text-h6">{{ event.title }}</div>
+                                    {{ event.content }}
+                                </q-card-section>
+                                <q-card-actions align="right">
+                                    <q-btn flat round dense :icon="expanded ? 'expand_less' : 'expand_more'" @click="expanded = !expanded" />
+                                </q-card-actions>
+                                <q-slide-transition>
+                                    <div v-show="expanded">
+                                        <q-separator />
+                                        <q-card-section>
+                                            test
+                                        </q-card-section>
+                                    </div>
+                                </q-slide-transition>
                             </q-card>
                         </q-dialog>
                     </q-btn>
@@ -58,6 +71,7 @@ import { Planning, mercredi, jeudi } from 'src/js/planning'
 
 const mer = ref<Planning>(mercredi)
 const jeu = ref<Planning>(jeudi)
+const expanded = ref(false)
 
 const layout = computed(() => {
     return Screen.lt.sm ? 'dense' : 'loose'
