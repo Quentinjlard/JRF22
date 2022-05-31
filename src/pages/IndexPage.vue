@@ -12,12 +12,12 @@
         <q-tab name="index" label="Accueil" v-if="Screen.width > 500" />
         <q-tab name="index" icon="home" v-else />
         <q-tab name="program" label="Programme" v-if="Screen.width > 500" />
-        <q-tab name="program" icon="insert_chart" v-else />
+        <q-tab name="program" icon="menu_book" v-else />
         <q-img
           src="icons/favicon-32x32.png"
           height="36px"
           width="36px"
-          class="q-mx-md bg-accent"
+          class="q-mx-md bg-white"
           :img-style="{ width: '28px', height: '28px', position: 'relative', top: '50%', left: '50%', transform: 'translateX(-50%) translateY(-50%)' }"
           style="border-radius: 50%"
         />

@@ -3,7 +3,10 @@
         <div class="q-py-lg q-px-sm text-h5 text-primary text-center m-title">
             Bienvenue aux Journées du Réseau Figure
         </div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perspiciatis unde accusantium quibusdam odit ea tempore molestias atque, expedita, reprehenderit nesciunt nisi aliquid nihil aut corporis. Nostrum dolorem repudiandae iusto.
+        Accueil<br>
+        Recap des Journées<br>
+        Partenaires (page annexe)<br>
+        Que faire a Reims le we ? (page annexe)
     </div>
 </template>
 
