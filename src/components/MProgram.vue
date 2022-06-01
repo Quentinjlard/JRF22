@@ -34,7 +34,9 @@
                                     <div v-show="expanded">
                                         <q-separator />
                                         <q-card-section>
-                                            test
+                                            <q-card-section class="q-pa-sm">{{ event.address }}</q-card-section>
+                                            <q-card-section class="q-pa-sm"><a :href="event.link">{{ event.link }}</a></q-card-section>
+                                            <q-card-section class="q-pa-sm">{{ event.details }}</q-card-section>
                                         </q-card-section>
                                     </div>
                                 </q-slide-transition>

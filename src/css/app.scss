@@ -5,8 +5,17 @@
     src: url('./fonts/Poppins-MediumItalic.ttf');
 }
 
+@font-face {
+    font-family: bigtitle;
+    src: url('./fonts/PermanentMarker-Regular.ttf');
+}
+
 .m-title {
     font-family: customtitle;
     letter-spacing: 2px;
     line-height: 90%;
+}
+
+.m-big-title {
+    font-family: bigtitle;
 }
