@@ -48,10 +48,10 @@
       <div>
         <div class="q-px-sm m-mentions_section">
           <div class="text-h6">Mentions légales</div>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+          <div>Ce site est le fruit du travail de l'association MIRAGE, CMI Reims, à l'occasion des Journées du Réseau FIGURE 2022. Merci de respecter ce travail.</div>
         </div>
         <div class="q-px-sm m-mentions_section">
-          <div class="text-h6">Liens</div>
+          <div class="text-h6">Nos liens</div>
           <div>
             <ul id="m-links">
               <li v-for="link in links" :key="link.id" class="cursor-pointer m-link">
@@ -61,19 +61,30 @@
           </div>
         </div>
         <div class="q-px-sm m-mentions_section">
-          <div class="text-h6">Contacts</div>
+          <div class="text-h6 q-pb-sm" style="line-height: 100%">Contacter CMI Alumni</div>
           <div>
             <div class="m-contacts">
-              <b>Adresse: </b>Ville,<br>
-              &nbsp;Rue<br>
-              &nbsp;Cedex<br>
-              &nbsp;FRANCE
+              <b>Gaëlle BEZAIN: </b>Présidente<br>
             </div>
             <div class="m-contacts">
-              <b>Mail: </b>mail@exemple.com
+              <b>Mail: </b><a href="mailto:bureau@cmi-alumni.fr" class="cursor-pointer">bureau@cmi-alumni.fr</a>
             </div>
             <div class="m-contacts">
-              <b>Tél.: </b>01 23 45 67 89
+              <b>Tél.: </b><a href="tel:0613898873" class="cursor-pointer">06.13.89.88.73</a>
+            </div>
+          </div>
+        </div>
+        <div class="q-px-sm m-mentions_section">
+          <div class="text-h6 q-pb-sm" style="line-height: 100%">Contacter MIRAGE</div>
+          <div>
+            <div class="m-contacts">
+              <b>Quentin JUILLIARD: </b>Président<br>
+            </div>
+            <div class="m-contacts">
+              <b>Mail: </b><a href="mailto:presidence@mirage-cmi-reims.fr" class="cursor-pointer">presidence@mirage-cmi-reims.fr</a>
+            </div>
+            <div class="m-contacts">
+              <b>Tél.: </b><a href="tel:0767510802" class="cursor-pointer">07.67.51.08.02</a>
             </div>
           </div>
         </div>
@@ -126,7 +137,7 @@ const links = ref([
 
 .m-mentions_section {
   margin: 1.5rem 0 0 0;
-  max-width: 190px;
+  width: 200px;
 }
 
 #m-links,
@@ -137,24 +148,33 @@ const links = ref([
   line-height: 100%;
 }
 
-.m-link a {
+.m-link a,
+.m-contacts a {
   text-decoration: none;
   color: inherit;
 }
 
-.m-link:hover {
+.m-link:hover,
+.m-contacts a:hover {
   color: $secondary;
 }
 
-@media screen and (min-width: 682px) {
+@media screen and (min-width: 560px) {
   .m-mentions_container > div {
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .m-mentions_container > div {
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 2em;
   }
 
   .m-mentions_section {
-    margin: 0 0 0 1.5rem;
+    margin: 0;
   }
 }
 </style>

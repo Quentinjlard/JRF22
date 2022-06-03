@@ -15,9 +15,6 @@
                     <q-btn flat dense label="En savoir plus" color="accent" @click="() => { event.dialog = !event.dialog; expanded = false }">
                         <q-dialog v-model="event.dialog">
                             <q-card style="position: relative">
-                                <q-card-actions class="absolute-top-right" style="z-index: 5">
-                                    <q-btn v-close-popup round flat icon="cancel" color="negative"/>
-                                </q-card-actions>
                                 <q-card-section style="min-height: 150px; max-height: 350px; height: 35vh; width: 100%" class="bg-grey-3 q-pa-none">
                                     <GMapMap :center="event.location" :zoom="8"/>
                                 </q-card-section>
@@ -54,9 +51,6 @@
                     <q-btn flat dense label="En savoir plus" color="accent" @click="() => { event.dialog = !event.dialog; expanded = false }">
                         <q-dialog v-model="event.dialog">
                             <q-card style="position: relative">
-                                <q-card-actions class="absolute-top-right" style="z-index: 5">
-                                    <q-btn v-close-popup round flat icon="cancel" color="negative"/>
-                                </q-card-actions>
                                 <q-card-section style="min-height: 150px; max-height: 350px; height: 35vh; width: 100%" class="bg-grey-3 q-pa-none">
                                     <GMapMap :center="event.location" :zoom="8"/>
                                 </q-card-section>
@@ -116,11 +110,11 @@ const img1 = computed(() => {
 })
 
 const img2 = computed(() => {
-    return 9*height.value
+    return 8.75*height.value
 })
 
 const img3 = computed(() => {
-    return 0
+    return 15.4*height.value
 })
 
 onMounted(() => {
