@@ -95,22 +95,22 @@ const slide = ref('index')
 const links = ref([
   {
     id: 1,
-    link: '#',
+    link: 'https://reseau-figure.fr/',
     label: 'Réseau FIGURE'
   },
   {
     id: 2,
-    link: '#',
+    link: 'https://www.onisep.fr/Choisir-mes-etudes/Apres-le-bac/Organisation-des-etudes-superieures/Les-CMI-cursus-master-en-ingenierie-Figure',
     label: 'Cursus Master en Ingénierie'
   },
   {
     id: 3,
-    link: '#',
+    link: 'https://cmi-alumni.fr/',
     label: 'Alumni'
   },
   {
     id: 4,
-    link: '#',
+    link: 'https://mirage-cmi-reims.fr/',
     label: 'MIRAGE - CMI Reims'
   },
 ])
