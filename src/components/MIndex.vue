@@ -19,26 +19,109 @@
         </div>
         <div class="m-illustration-container" :style="(Screen.height < 500) ? 'margin-top: 460px' : ''">
             <q-img src="~assets/undraw_graduation_re_gthn.svg"
-                :width="Screen.width > 500 ? (Screen.width > 1000 ? '60%' : '70%') : '100%'" class="m-illustration q-mb-md"
-                :style="(Screen.width < 500) ? 'margin-bottom: 4.75em' : ''" />
+                :width="Screen.width > 500 ? (Screen.width > 1000 ? '60%' : '70%') : '100%'"
+                class="m-illustration q-mb-md" :style="(Screen.width < 500) ? 'margin-bottom: 4.75em' : ''" />
         </div>
     </div>
-    <div>
-        A ajouter :<br>
-        Recap des Journées<br>
-        Partenaires (lien vers page annexe)<br>
-        Que faire a Reims le we ? (lien vers page annexe)
+    <div id="apercu" class="full-width q-px-lg q-py-xl bg-accent text-white">
+        <div class="text-center text-h4">Aperçu</div>
+        <div class="row">
+            <div class="col">
+                <div class="text-h6">Réseau & Vie associative</div>
+                <div class="q-pr-md q-py-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias temporibus dicta minus explicabo,
+                    totam maxime. Soluta sapiente fugiat quas nobis ex, libero eos, odio voluptatem magnam ad omnis
+                    inventore temporibus!<br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi aliquam consequuntur officia
+                    corporis molestias ex repellat quos, accusantium eligendi, praesentium incidunt optio delectus,
+                    minima nesciunt provident enim quod earum.
+                </div>
+            </div>
+            <div class="col">
+                <img src="" alt="[Image]">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="" alt="[Image]">
+            </div>
+            <div class="col">
+                <div class="text-h6 text-right">Activités & Visites</div>
+                <div class="text-right q-pl-md q-py-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias temporibus dicta minus explicabo,
+                    totam maxime. Soluta sapiente fugiat quas nobis ex, libero eos, odio voluptatem magnam ad omnis
+                    inventore temporibus!<br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi aliquam consequuntur officia
+                    corporis molestias ex repellat quos, accusantium eligendi, praesentium incidunt optio delectus,
+                    minima nesciunt provident enim quod earum.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="text-h6">Cérémonie & Gala</div>
+                <div class="q-pr-md q-py-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias temporibus dicta minus explicabo,
+                    totam maxime. Soluta sapiente fugiat quas nobis ex, libero eos, odio voluptatem magnam ad omnis
+                    inventore temporibus!<br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi aliquam consequuntur officia
+                    corporis molestias ex repellat quos, accusantium eligendi, praesentium incidunt optio delectus,
+                    minima nesciunt provident enim quod earum.
+                </div>
+            </div>
+            <div class="col">
+                <img src="" alt="[Image]">
+            </div>
+        </div>
+    </div>
+    <div class="full-width q-px-lg q-py-xl">
+        <div class="text-center text-h4">Nos Partenaires</div>
+        <div class="bg-grey-3 rounded-borders q-mx-auto q-mt-md"
+            style="position: relative; max-width: 900px; min-height: 6em; overflow: hidden;" @mouseenter="hover = true"
+            @mouseleave="hover = false">
+            <div id="part-list" v-show="Platform.has.touch || hover">
+                <q-btn color="primary" label="Voir tous les partenaires" id="part-list-btn" to="partenaires" />
+            </div>
+        </div>
+    </div>
+    <div class="full-width q-px-lg q-py-xl">
+        <div class="text-center text-h4">Que faire à Reims ?</div>
     </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Screen } from 'quasar'
+import { Screen, Platform } from 'quasar'
 
 const bigTitle = ref('Journées du Réseau FIGURE')
+
+const hover = ref(false)
 </script>
 
 <style lang="scss">
+
+#part-list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(180, 180, 180, .5);
+}
+
+#part-list-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#apercu .row > .col {
+    max-width: 450px;
+}
+
+#apercu .row {
+    align-items: center;
+    flex-direction: column;
+}
 
 #m-head-container > div:not(.m-illustration-container) {
     transform: translateY(-40px) !important
@@ -92,6 +175,14 @@ const bigTitle = ref('Journées du Réseau FIGURE')
 @media screen and (min-width: 500px) {
     .m-big-title_text {
         font-size: 4em;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    #apercu .row {
+        gap: 3em;
+        flex-direction: row;
+        justify-content: center;
     }
 }
 
