@@ -1,5 +1,5 @@
 <template>
-    <div class="q-pa-none" style="height: 75px">
+    <div class="q-pa-none" style="height: 75px" id="m-head-container">
         <div class="full-width text-primary absolute-top-left" style="height: 50vh">
             <div class="absolute full-width text-center m-title"
                 :style="Screen.height >= 500 ? (Screen.width < 500 ? 'top: 48%' : 'top: 40%') : 'top: 40px'">
@@ -19,8 +19,8 @@
         </div>
         <div class="m-illustration-container" :style="(Screen.height < 500) ? 'margin-top: 460px' : ''">
             <q-img src="~assets/undraw_graduation_re_gthn.svg"
-                :width="Screen.width > 500 ? (Screen.width > 1000 ? '60%' : '70%') : '100%'" class="m-illustration"
-                :style="(Screen.width < 500) ? 'margin-bottom: 2.5em' : ''" />
+                :width="Screen.width > 500 ? (Screen.width > 1000 ? '60%' : '70%') : '100%'" class="m-illustration q-mb-md"
+                :style="(Screen.width < 500) ? 'margin-bottom: 4.75em' : ''" />
         </div>
     </div>
     <div>
@@ -40,8 +40,9 @@ const bigTitle = ref('Journées du Réseau FIGURE')
 
 <style lang="scss">
 
-
-
+#m-head-container > div:not(.m-illustration-container) {
+    transform: translateY(-40px) !important
+}
 
 .m-big-title {
     height: 100vh;
