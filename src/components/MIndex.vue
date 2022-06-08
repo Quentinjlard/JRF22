@@ -23,7 +23,7 @@
                 class="m-illustration q-mb-md" :style="(Screen.width < 500) ? 'margin-bottom: 4.75em' : ''" />
         </div>
     </div>
-    <div id="apercu" class="full-width q-px-lg q-py-xl bg-accent text-white">
+    <div id="apercu" class="full-width q-px-lg q-py-xl bg-primary text-white">
         <div class="text-center text-h4">Aperçu</div>
         <div class="row">
             <div class="col">
@@ -75,17 +75,29 @@
         </div>
     </div>
     <div class="full-width q-px-lg q-py-xl">
-        <div class="text-center text-h4">Nos Partenaires</div>
+        <div class="text-center text-h4 text-primary">Nos Partenaires</div>
         <div class="bg-grey-3 rounded-borders q-mx-auto q-mt-md"
             style="position: relative; max-width: 900px; min-height: 6em; overflow: hidden;" @mouseenter="hover = true"
             @mouseleave="hover = false">
             <div id="part-list" v-show="Platform.has.touch || hover">
-                <q-btn color="primary" label="Voir tous les partenaires" id="part-list-btn" to="partenaires" />
+                <q-btn color="primary" label="Voir tous les partenaires" id="part-list-btn" to="partenaires" target="_blank" />
             </div>
         </div>
     </div>
-    <div class="full-width q-px-lg q-py-xl">
-        <div class="text-center text-h4">Que faire à Reims ?</div>
+    <div class="full-width q-px-lg q-py-xl" style="position: relative">
+        <div class="text-center text-h4 text-primary">Que faire à Reims ?</div>
+        <div class="text-center text-subtitle1 text-primary">Vous restez passer le week-end à Reims et ne savez pas comment en profiter ? Les bons plans ici !</div>
+        <q-carousel animated infinite arrows :autoplay="autoplay" @mouseenter="autoplay = false"
+            @mouseleave="autoplay = true" transition-prev="slide-right" transition-next="slide-left" v-model="slide"
+            class="q-my-md q-mx-auto rounded-borders shadow-1" style="max-width: 900px">
+            <q-carousel-slide v-for="s in slides" :key="s.id" :name="s.id" :img-src="s.src">
+                <div class="absolute-bottom text-white text-center q-pa-lg" style="background: rgba(60, 60, 60, .40)">
+                    <div class="text-h5">{{ s.title }}</div>
+                    <div>{{ s.text }}</div>
+                </div>
+            </q-carousel-slide>
+        </q-carousel>
+        <q-btn label="Voir tous les bons plans" color="primary" outline rounded ripple style="left: 50%; transform: translateX(-50%);" to="we-reims" target="_blank" />
     </div>
 </template>
 
@@ -94,8 +106,36 @@ import { ref } from 'vue'
 import { Screen, Platform } from 'quasar'
 
 const bigTitle = ref('Journées du Réseau FIGURE')
-
 const hover = ref(false)
+const autoplay = ref(true)
+const slide = ref(1)
+
+const slides = ref([
+    {
+        id: 1,
+        src: 'https://cdn.quasar.dev/img/mountains.jpg',
+        title: 'Titre 1',
+        text: 'texte'
+    },
+    {
+        id: 2,
+        src: 'https://cdn.quasar.dev/img/parallax1.jpg',
+        title: 'Titre 2',
+        text: 'texte'
+    },
+    {
+        id: 3,
+        src: 'https://cdn.quasar.dev/img/parallax2.jpg',
+        title: 'Titre 3',
+        text: 'texte'
+    },
+    {
+        id: 4,
+        src: 'https://cdn.quasar.dev/img/quasar.jpg',
+        title: 'Titre 4',
+        text: 'texte'
+    },
+])
 </script>
 
 <style lang="scss">
