@@ -80,7 +80,7 @@
             style="position: relative; max-width: 900px; min-height: 6em; overflow: hidden;" @mouseenter="hover = true"
             @mouseleave="hover = false">
             <div id="part-list" v-show="Platform.has.touch || hover">
-                <q-btn color="primary" label="Voir tous les partenaires" id="part-list-btn" to="partenaires" target="_blank" />
+                <q-btn color="primary" label="Voir tous les partenaires" id="part-list-btn" to="partenaires" />
             </div>
         </div>
     </div>
@@ -97,7 +97,7 @@
                 </div>
             </q-carousel-slide>
         </q-carousel>
-        <q-btn label="Voir tous les bons plans" color="primary" outline rounded ripple style="left: 50%; transform: translateX(-50%);" to="we-reims" target="_blank" />
+        <q-btn label="Voir tous les bons plans" color="primary" outline rounded ripple style="left: 50%; transform: translateX(-50%);" to="we-reims" />
     </div>
 </template>
 

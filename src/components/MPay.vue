@@ -3,10 +3,59 @@
         <div class="q-py-lg q-px-sm text-h5 text-primary text-center m-title">
             Réservez votre place en ligne !
         </div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perspiciatis unde accusantium quibusdam odit ea tempore molestias atque, expedita, reprehenderit nesciunt nisi aliquid nihil aut corporis. Nostrum dolorem repudiandae iusto.
+        <div class="q-pa-md">
+            <div class="flex" style="justify-content: center">
+                <q-markup-table :style="Screen.width > 700 ? 'width: 65vw' : 'width: calc(100vw - 20px)'">
+                    <thead>
+                        <tr class="bg-primary">
+                            <th colspan="3">
+                                <div class="text-h5 text-white text-left q-pl-lg">Nos Tarifs</div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Formules</th>
+                            <th class="text-right">Tarif plein (euros)</th>
+                            <th class="text-right">Tarif étudiant (euros)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">Pass 2 Jours</td>
+                            <td class="text-right">0.00</td>
+                            <td class="text-right">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Pass 1 Jour sans gala</td>
+                            <td class="text-right">0.00</td>
+                            <td class="text-right">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Pass 1 Jour avec gala</td>
+                            <td class="text-right">0.00</td>
+                            <td class="text-right">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Pass Céremonie sans gala</td>
+                            <td class="text-right">0.00</td>
+                            <td class="text-right">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Pass Céremonie avec gala</td>
+                            <td class="text-right">0.00</td>
+                            <td class="text-right">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Gala</td>
+                            <td class="text-right">0.00</td>
+                            <td class="text-right">0.00</td>
+                        </tr>
+                    </tbody>
+                </q-markup-table>
+            </div>
+        </div>
     </div>
 </template>
 
 <script lang="ts" setup>
-// import { ref } from 'vue'
+import { Screen } from 'quasar'
 </script>
