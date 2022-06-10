@@ -53,6 +53,10 @@
                 </q-markup-table>
             </div>
         </div>
+        <div class="q-pa-md flex flex-center column">
+            <q-btn color="primary" label="Je paye par carte bleue !" class="q-my-sm" rounded />
+            <q-btn color="primary" label="..." class="q-my-sm" rounded />
+        </div>
     </div>
 </template>
 

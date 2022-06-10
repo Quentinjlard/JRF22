@@ -25,8 +25,9 @@
         <div ref="view" class="absolute-center fit hidden flex flex-center" style="background: rgba(40, 40, 40, .75)">
             <q-img src="picture/jrf22-0.jpg" fit="contain" style="max-width: 900px"
                 :class="Screen.width < 800 ? (Screen.width < 600 ? (Screen.width < 400 ? '' : 'q-mx-xs') : 'q-mx-md') : 'q-mx-xl'">
-                <div class="absolute-top full-width" align="right">
-                    <span class="text-subtitle2 q-px-lg">JRF2022</span>
+                <div class="absolute-top-left"
+                    style="left: 50%; transform: translateX(-50%); padding: 0 16px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px"
+                    align="right">
                     <q-btn color="white" icon="more_horiz" size="sm" round flat>
                         <q-menu auto-close>
                             <q-list style="min-width: 120px">
@@ -116,7 +117,7 @@ function onOpen(): void {
 }
 
 onMounted(() => {
-    api.get('https://jrf22.mirage-cmi-reims.fr/pictures/count.json')
+    api.get(/* 'https://jrf22.mirage-cmi-reims.fr/pictures/count.json' */ 'http://localhost:8080/pictures/count.json')
         .then((response) => {
             imgCount.value = response.data.count
         })
