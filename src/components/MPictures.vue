@@ -109,11 +109,27 @@ function onClose(): void {
 }
 
 function onDownload(): void {
-    console.log('on download')
+    const v = view.value as HTMLElement
+    const img = v.querySelector('img') as HTMLImageElement
+    const src = img.src
+    const match = src.match(/jrf22-[0-9]+\.jpg$/)
+    let name = ''
+    if(match) {
+        name = match[0]
+    }
+    // console.log(name)
+    const button = document.createElement('a')
+    button.href = src
+    button.download = name
+    button.click()
+    button.remove()
 }
 
 function onOpen(): void {
-    console.log('on open')
+    const v = view.value as HTMLElement
+    const img = v.querySelector('img') as HTMLImageElement
+    const src = img.src
+    window.open(src, '_blank')?.focus()
 }
 
 onMounted(() => {
