@@ -29,7 +29,7 @@
 
       <q-separator />
 
-      <q-tab-panels v-model="slide" animated :transition-duration="300" :swipeable="Platform.has.touch" infinite style="min-height: 100vh">
+      <q-tab-panels v-model="slide" animated :transition-duration="300" infinite style="min-height: 100vh">
         <q-tab-panel name="index" class="q-pa-none m-content_slide">
           <m-index />
         </q-tab-panel>
@@ -95,7 +95,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Screen, Platform } from 'quasar'
+import { Screen } from 'quasar'
 import MIndex from 'src/components/MIndex.vue'
 import MPay from 'src/components/MPay.vue'
 import MPictures from 'src/components/MPictures.vue'
