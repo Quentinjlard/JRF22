@@ -54,12 +54,20 @@
             </div>
         </div>
         <div class="q-pa-md flex flex-center column">
-            <q-btn color="primary" label="Je paye par carte bleue !" class="q-my-sm" rounded />
-            <q-btn color="primary" label="Je préfère un bon de commande" class="q-my-sm" rounded />
+            <q-btn color="primary" label="Je paye par carte bleue !" class="q-my-sm" rounded href="https://www.helloasso.com/associations/master-en-ingenierie-de-reims-association-general-etudiant/evenements/journee-reseaux-figure-1" target="_blank" />
+            <q-btn color="primary" label="Je préfère un bon de commande" class="q-my-sm" rounded @click="notify"/>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { Screen } from 'quasar'
+import { Screen, Notify } from 'quasar'
+
+function notify(): void {
+    Notify.create({
+        message: 'Service temporairement indisponible',
+        color: 'warning',
+        textColor: 'negative'
+    })
+}
 </script>

@@ -77,11 +77,8 @@
     <div class="full-width q-px-lg q-py-xl">
         <div class="text-center text-h4 text-primary">Nos Partenaires</div>
         <div class="bg-grey-3 rounded-borders q-mx-auto q-mt-md"
-            style="position: relative; max-width: 900px; min-height: 6em; overflow: hidden;" @mouseenter="hover = true"
-            @mouseleave="hover = false">
-            <div id="part-list" v-show="Platform.has.touch || hover">
-                <q-btn color="primary" label="Voir tous les partenaires" id="part-list-btn" to="partenaires" />
-            </div>
+            style="position: relative; max-width: 900px; min-height: 6em; overflow: hidden;">
+            <!-- les partenaires -->
         </div>
     </div>
     <div class="full-width q-px-lg q-py-xl" style="position: relative">
@@ -103,10 +100,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Screen, Platform } from 'quasar'
+import { Screen } from 'quasar'
 
 const bigTitle = ref('Journées du Réseau FIGURE')
-const hover = ref(false)
 const autoplay = ref(true)
 const slide = ref(1)
 

@@ -133,7 +133,7 @@ function onOpen(): void {
 }
 
 onMounted(() => {
-    api.get(/* 'https://jrf22.mirage-cmi-reims.fr/pictures/count.json' */ 'http://localhost:8080/pictures/count.json')
+    api.get('https://jrf22.mirage-cmi-reims.fr/pictures/count.json' /* 'http://localhost:8080/pictures/count.json' */)
         .then((response) => {
             imgCount.value = response.data.count
         })
