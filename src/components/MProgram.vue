@@ -19,7 +19,7 @@
                             <q-card style="position: relative">
                                 <q-card-section style="min-height: 150px; max-height: 350px; height: 35vh; width: 100%"
                                     class="bg-grey-3 q-pa-none">
-                                    <GMapMap :center="event.location" :zoom="8" />
+                                    <GMapMap :center="event.location" :zoom="10" />
                                 </q-card-section>
                                 <q-separator />
                                 <q-card-section>
@@ -61,7 +61,7 @@
                             <q-card style="position: relative">
                                 <q-card-section style="min-height: 150px; max-height: 350px; height: 35vh; width: 100%"
                                     class="bg-grey-3 q-pa-none">
-                                    <GMapMap :center="event.location" :zoom="8" />
+                                    <GMapMap :center="event.location" :zoom="10" />
                                 </q-card-section>
                                 <q-separator />
                                 <q-card-section>

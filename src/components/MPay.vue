@@ -1,7 +1,13 @@
 <template>
     <div class="q-pa-none">
         <div class="q-py-lg q-px-sm text-h5 text-primary text-center m-title">
-            Réservez votre place en ligne !
+            Inscrivez-vous en ligne !
+        </div>
+        <div class="q-pa-md">
+            <div class="flex flex-center">
+                <b>Votre inscription ne prend pas en compte le transport, l'hébergement est proposé en option uniquement
+                    pour les étudiants et alumni.</b>
+            </div>
         </div>
         <div class="q-pa-md">
             <div class="flex" style="justify-content: center">
@@ -54,8 +60,13 @@
             </div>
         </div>
         <div class="q-pa-md flex flex-center column">
-            <q-btn color="primary" label="Je paye par carte bleue !" class="q-my-sm" rounded href="https://www.helloasso.com/associations/master-en-ingenierie-de-reims-association-general-etudiant/evenements/journee-reseaux-figure-1" target="_blank" />
-            <q-btn color="primary" label="Je préfère un bon de commande" class="q-my-sm" rounded @click="notify"/>
+            <div>Pour les étudiants et alumni qui règlent en ligne</div>
+            <q-btn color="primary" label="Je paye par carte bleue !" class="q-my-sm" rounded
+                href="https://www.helloasso.com/associations/master-en-ingenierie-de-reims-association-general-etudiant/evenements/journee-reseaux-figure-1"
+                target="_blank" />
+            <br />
+            <div>Pour les enseignants et étudiants dont les frais sont pris en charge par leur établissement</div>
+            <q-btn color="primary" label="Je préfère un bon de commande" class="q-my-sm" rounded @click="notify" />
         </div>
     </div>
 </template>

@@ -24,26 +24,27 @@
         </div>
     </div>
     <div id="apercu" class="full-width q-px-lg q-py-xl bg-primary text-white">
-        <div class="text-center text-h4">Aperçu</div>
+        <div class="text-center text-h4 q-mb-md">Aperçu</div>
         <div class="row">
             <div class="col">
                 <div class="text-h6">Réseau & Vie associative</div>
-                <div class="q-pr-md q-py-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias temporibus dicta minus explicabo,
-                    totam maxime. Soluta sapiente fugiat quas nobis ex, libero eos, odio voluptatem magnam ad omnis
-                    inventore temporibus!<br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi aliquam consequuntur officia
-                    corporis molestias ex repellat quos, accusantium eligendi, praesentium incidunt optio delectus,
-                    minima nesciunt provident enim quod earum.
+                <div class="q-pr-md q-py-sm text-justify">
+                    Cette année, nous nous donnons rendez-vous pour les 10 ans du Réseau FIGURE, du mercredi 8 au jeudi
+                    9 novembre à Reims, la cité des sacres.<br /> Nous aurons l’opportunité de découvrir plusieurs lieux
+                    emblématiques de la ville. Organisée par le Réseau FIGURE, l'Université de Reims, l'association
+                    MIRAGE - CMI Reims et CMI ALUMNI, cette rencontre réunira étudiants, alumnis et enseignants issus de
+                    plus de 25 universités françaises. C’est l’occasion pour le Réseau de faire un bilan associatif,
+                    d’organiser des ateliers variés et surtout de fédérer ses membres !
                 </div>
             </div>
-            <div class="col">
-                <img src="" alt="[Image]">
+            <div class="col flex flex-center m-img">
+                <img src="figure/48A0209_copie.jpg" alt="Assemblée générale du Réseau FIGURE" width="80%"
+                    style="min-width: 300px" class="shadow-3">
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col">
-                <img src="" alt="[Image]">
+                <img src="" alt="Visite de la Rochelle">
             </div>
             <div class="col">
                 <div class="text-h6 text-right">Activités & Visites</div>
@@ -56,21 +57,19 @@
                     minima nesciunt provident enim quod earum.
                 </div>
             </div>
-        </div>
+        </div> -->
+        <br />
         <div class="row">
             <div class="col">
                 <div class="text-h6">Cérémonie & Gala</div>
-                <div class="q-pr-md q-py-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias temporibus dicta minus explicabo,
-                    totam maxime. Soluta sapiente fugiat quas nobis ex, libero eos, odio voluptatem magnam ad omnis
-                    inventore temporibus!<br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi aliquam consequuntur officia
-                    corporis molestias ex repellat quos, accusantium eligendi, praesentium incidunt optio delectus,
-                    minima nesciunt provident enim quod earum.
+                <div class="q-pr-md q-py-sm text-justify">
+                    A l'issue de ces deux belles journées sera organisée la cérémonie de clôture dans l'une des salles les plus chic du centre de Reims ! <br />
+                    L'occasion rêvée pour tous de faire un dernier point sur les JRF 2022 et de profiter de la soirée autour d'un somptueux gala. Nous vous y attendons nombreux !
                 </div>
             </div>
-            <div class="col">
-                <img src="" alt="[Image]">
+            <div class="col flex flex-center m-img">
+                <img src="figure/DSC_0115_copie.jpg" alt="Remise des diplômes" width="80%" style="min-width: 300px"
+                    class="shadow-3">
             </div>
         </div>
     </div>
@@ -83,18 +82,20 @@
     </div>
     <div class="full-width q-px-lg q-py-xl" style="position: relative">
         <div class="text-center text-h4 text-primary">Que faire à Reims ?</div>
-        <div class="text-center text-subtitle1 text-primary">Vous restez passer le week-end à Reims et ne savez pas comment en profiter ? Les bons plans ici !</div>
+        <div class="text-center text-subtitle1 text-primary">Vous restez passer le week-end à Reims et ne savez pas
+            comment en profiter ? Les bons plans ici !</div>
         <q-carousel animated infinite arrows :autoplay="autoplay" @mouseenter="autoplay = false"
             @mouseleave="autoplay = true" transition-prev="slide-right" transition-next="slide-left" v-model="slide"
             class="q-my-md q-mx-auto rounded-borders shadow-1" style="max-width: 900px">
             <q-carousel-slide v-for="s in slides" :key="s.id" :name="s.id" :img-src="s.src">
-                <div class="absolute-bottom text-white text-center q-pa-lg" style="background: rgba(60, 60, 60, .40)">
+                <div class="absolute-bottom text-white text-center q-pa-lg" style="background: rgba(60, 60, 60, .5)">
                     <div class="text-h5">{{ s.title }}</div>
                     <div>{{ s.text }}</div>
                 </div>
             </q-carousel-slide>
         </q-carousel>
-        <q-btn label="Voir tous les bons plans" color="primary" outline rounded ripple style="left: 50%; transform: translateX(-50%);" to="we-reims" />
+        <q-btn label="Voir tous les bons plans" color="primary" outline rounded ripple
+            style="left: 50%; transform: translateX(-50%);" to="we-reims" />
     </div>
 </template>
 
@@ -109,32 +110,35 @@ const slide = ref(1)
 const slides = ref([
     {
         id: 1,
-        src: 'https://cdn.quasar.dev/img/mountains.jpg',
-        title: 'Titre 1',
-        text: 'texte'
+        src: 'figure/reims/REIMS.jpg',
+        title: 'Cathédrale Notre-Dame de Reims',
+        text: 'L\'incontournable de la Cité des Sacres !'
     },
     {
         id: 2,
-        src: 'https://cdn.quasar.dev/img/parallax1.jpg',
-        title: 'Titre 2',
-        text: 'texte'
+        src: 'figure/reims/REIMS2.jpg',
+        title: 'Caves de Champagne',
+        text: 'Un détour savoureux par la Route du Champagne auprès des maisons les plus prestigieuses'
     },
     {
         id: 3,
-        src: 'https://cdn.quasar.dev/img/parallax2.jpg',
-        title: 'Titre 3',
-        text: 'texte'
+        src: 'figure/reims/REIMS3.jpg',
+        title: 'Place d\'Erlon',
+        text: 'L\'un des passages les plus touristiques de Reims, à mi-chemin entre la gare et les rues commerçantes'
     },
     {
         id: 4,
-        src: 'https://cdn.quasar.dev/img/quasar.jpg',
-        title: 'Titre 4',
-        text: 'texte'
+        src: 'figure/reims/REIMS4.jpg',
+        title: 'Place Royale',
+        text: 'A la découverte du centre ville : Place Royale, Le Forum, et plein d\'autres endroits vous attendent...'
     },
 ])
 </script>
 
 <style lang="scss">
+.m-img img {
+    border-radius: 12px;
+}
 
 #part-list {
     position: absolute;
