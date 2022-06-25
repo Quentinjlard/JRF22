@@ -4,7 +4,7 @@
             Inscrivez-vous en ligne !
         </div>
         <div class="q-pa-md">
-            <div class="flex flex-center">
+            <div class="flex flex-center text-center">
                 <b>Votre inscription ne prend pas en compte le transport, l'hébergement est proposé en option uniquement
                     pour les étudiants et alumni.</b>
             </div>
@@ -59,7 +59,7 @@
                 </q-markup-table>
             </div>
         </div>
-        <div class="q-pa-md flex flex-center column">
+        <div class="q-pa-md flex flex-center column text-center">
             <div>Pour les étudiants et alumni qui règlent en ligne</div>
             <q-btn color="primary" label="Je paye par carte bleue !" class="q-my-sm" rounded
                 href="https://www.helloasso.com/associations/master-en-ingenierie-de-reims-association-general-etudiant/evenements/journee-reseaux-figure-1"

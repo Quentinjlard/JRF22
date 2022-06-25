@@ -24,22 +24,22 @@
                                 <q-separator />
                                 <q-card-section>
                                     <div class="text-subtitle2 text-secondary" style="line-height: 70%">{{
-                                    event.subtitle }}</div>
+                                        event.subtitle }}</div>
                                     <div class="text-h6">{{ event.title }}</div>
                                     {{ event.content }}
                                 </q-card-section>
                                 <q-card-actions align="right">
-                                    <q-btn flat round dense :icon="expanded ? 'expand_less' : 'expand_more'"
-                                        @click="expanded = !expanded" />
+                                    <q-btn flat rounded dense :icon="expanded ? 'expand_less' : 'expand_more'"
+                                        label="Voir plus" color="grey" @click="expanded = !expanded" />
                                 </q-card-actions>
                                 <q-slide-transition>
                                     <div v-show="expanded">
                                         <q-separator />
                                         <q-card-section>
+                                            <q-card-section class="q-pa-sm">{{ event.details }}</q-card-section>
                                             <q-card-section class="q-pa-sm">{{ event.address }}</q-card-section>
                                             <q-card-section class="q-pa-sm"><a :href="event.link">{{ event.link }}</a>
                                             </q-card-section>
-                                            <q-card-section class="q-pa-sm">{{ event.details }}</q-card-section>
                                         </q-card-section>
                                     </div>
                                 </q-slide-transition>
@@ -66,22 +66,22 @@
                                 <q-separator />
                                 <q-card-section>
                                     <div class="text-subtitle2 text-secondary" style="line-height: 70%">{{
-                                    event.subtitle }}</div>
+                                        event.subtitle }}</div>
                                     <div class="text-h6">{{ event.title }}</div>
                                     {{ event.content }}
                                 </q-card-section>
                                 <q-card-actions align="right">
-                                    <q-btn flat round dense :icon="expanded ? 'expand_less' : 'expand_more'"
-                                        @click="expanded = !expanded" />
+                                    <q-btn flat rounded dense :icon="expanded ? 'expand_less' : 'expand_more'"
+                                        label="Voir plus" color="grey" @click="expanded = !expanded" />
                                 </q-card-actions>
                                 <q-slide-transition>
                                     <div v-show="expanded">
                                         <q-separator />
                                         <q-card-section>
+                                            <q-card-section class="q-pa-sm">{{ event.details }}</q-card-section>
                                             <q-card-section class="q-pa-sm">{{ event.address }}</q-card-section>
                                             <q-card-section class="q-pa-sm"><a :href="event.link">{{ event.link }}</a>
                                             </q-card-section>
-                                            <q-card-section class="q-pa-sm">{{ event.details }}</q-card-section>
                                         </q-card-section>
                                     </div>
                                 </q-slide-transition>
@@ -106,7 +106,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref, onMounted, watch } from 'vue'
 import { Screen } from 'quasar'
 import { Planning, mercredi, jeudi } from 'src/js/planning'
 
@@ -133,6 +133,16 @@ const img2 = computed(() => {
 
 const img3 = computed(() => {
     return 15.45*height.value
+})
+
+watch(height, () => {
+    const entries = document.querySelectorAll('.q-timeline__content')
+    for (const key in entries) {
+        const entry = entries[key] as unknown
+        if (entry instanceof HTMLElement && key != '0') {
+            entry.style.setProperty('height', height.value + 'px')
+        }
+    }
 })
 
 onMounted(() => {
