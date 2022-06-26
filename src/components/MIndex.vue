@@ -74,8 +74,7 @@
                 </div>
             </div>
             <div class="col flex flex-center m-img">
-                <img src="figure/degerman1_3_160836.jpeg" alt="Salon Degermann" width="80%" style="min-width: 300px"
-                    class="shadow-3">
+                <img src="" alt="Image" width="80%" style="min-width: 300px" class="shadow-3">
             </div>
         </div>
     </div>
@@ -100,8 +99,17 @@
                 </div>
             </q-carousel-slide>
         </q-carousel>
-        <q-btn label="Voir tous les bons plans" color="primary" outline rounded ripple
-            style="left: 50%; transform: translateX(-50%);" to="we-reims" />
+        <div class="row">
+            <div class="col flex flex-center">
+                <q-btn label="Office du tourisme" color="primary" outline rounded ripple href="" />
+            </div>
+            <div class="col flex flex-center">
+                <q-btn label="btn1" color="primary" outline rounded ripple href="" />
+            </div>
+            <div class="col flex flex-center">
+                <q-btn label="btn2" color="primary" outline rounded ripple href="" />
+            </div>
+        </div>
     </div>
 </template>
 

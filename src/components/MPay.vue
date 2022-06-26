@@ -6,7 +6,8 @@
         <div class="q-pa-md">
             <div class="flex flex-center text-center">
                 <b>Votre inscription ne prend pas en compte le transport. L'hébergement est proposé en option uniquement
-                    pour les étudiants et alumni.</b>
+                    pour les étudiants et alumni.</b><br />
+                *: les professeurs sont conviés aux divers repas, seul le dîner du gala n'est pas compris dans leur tarif.
             </div>
         </div>
         <div class="q-pa-md">
@@ -31,7 +32,7 @@
                             <td class="text-right">0.00</td>
                         </tr>
                         <tr>
-                            <td class="text-left">Pass 1 Jour sans gala</td>
+                            <td class="text-left">Pass 1 Jour sans gala*</td>
                             <td class="text-right">0.00</td>
                             <td class="text-right">0.00</td>
                         </tr>
@@ -41,7 +42,7 @@
                             <td class="text-right">0.00</td>
                         </tr>
                         <tr>
-                            <td class="text-left">Pass Céremonie sans gala</td>
+                            <td class="text-left">Pass Céremonie sans gala*</td>
                             <td class="text-right">0.00</td>
                             <td class="text-right">0.00</td>
                         </tr>
