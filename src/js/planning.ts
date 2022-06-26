@@ -202,7 +202,7 @@ export const jeudi: Planning = [
     },
     {
         id: 5,
-        title: 'Gala',
+        title: 'Gala des Alumnis',
         subtitle: '19h30',
         side: 'left',
         icon: 'celebration',

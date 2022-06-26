@@ -19,7 +19,11 @@
                             <q-card style="position: relative">
                                 <q-card-section style="min-height: 150px; max-height: 350px; height: 35vh; width: 100%"
                                     class="bg-grey-3 q-pa-none">
-                                    <GMapMap :center="event.location" :zoom="10" />
+                                    <GMapMap :center="event.location" :zoom="15">
+                                        <GMapCluster :zoomOnClick="true">
+                                            <GMapMarker :position="event.location" clickable />
+                                        </GMapCluster>
+                                    </GMapMap>
                                 </q-card-section>
                                 <q-separator />
                                 <q-card-section>
@@ -61,7 +65,11 @@
                             <q-card style="position: relative">
                                 <q-card-section style="min-height: 150px; max-height: 350px; height: 35vh; width: 100%"
                                     class="bg-grey-3 q-pa-none">
-                                    <GMapMap :center="event.location" :zoom="10" />
+                                    <GMapMap :center="event.location" :zoom="15">
+                                        <GMapCluster :zoomOnClick="true">
+                                            <GMapMarker :position="event.location" clickable />
+                                        </GMapCluster>
+                                    </GMapMap>
                                 </q-card-section>
                                 <q-separator />
                                 <q-card-section>
@@ -151,8 +159,9 @@ onMounted(() => {
             height.value = entry.contentRect.height
         })
     })
-    const target = document.querySelector('.q-timeline__entry') as Element
-    observer.observe(target)
+    const targets = document.querySelectorAll('.q-timeline__entry') as NodeListOf<HTMLElement>
+    observer.observe(targets[0])
+    targets[targets.length - 1]?.style.setProperty('padding-bottom', '24px', 'important')
 })
 </script>
 

@@ -83,7 +83,7 @@
           <div class="text-h6 q-pb-sm" style="line-height: 100%">Contact FIGURE</div>
           <div>
             <div class="m-contacts">
-              <b>Nathalie GAVEAU: </b>Trésorière<br>
+              <b>Nathalie GAVEAU</b><br>
             </div>
             <div class="m-contacts">
               <b>Mail: </b><a href="mailto:nathalie.gaveau@univ-reims.fr"

@@ -42,33 +42,39 @@
                     style="min-width: 300px" class="shadow-3">
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="col">
-                <img src="" alt="Visite de la Rochelle">
+        <br />
+        <div class="row">
+            <div class="col flex flex-center m-img">
+                <img src="figure/DSC_0115_copie.jpg" alt="Remise des diplômes" width="80%" style="min-width: 300px"
+                    class="shadow-3">
             </div>
             <div class="col">
                 <div class="text-h6 text-right">Activités & Visites</div>
-                <div class="text-right q-pl-md q-py-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias temporibus dicta minus explicabo,
-                    totam maxime. Soluta sapiente fugiat quas nobis ex, libero eos, odio voluptatem magnam ad omnis
-                    inventore temporibus!<br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi aliquam consequuntur officia
-                    corporis molestias ex repellat quos, accusantium eligendi, praesentium incidunt optio delectus,
-                    minima nesciunt provident enim quod earum.
+                <div class="text-justify q-pl-md q-py-sm">
+                    Suite au bilan du Réseau, nous nous laisserons emporter pars des témoignages de la formation et du
+                    rôle d'ingénieur en Europe et dans le reste du monde !<br />
+                    Et puisque 10 ans ça se fête, nous avons prévu une expérience 100% rémoise : la visite des caves de
+                    la Maison de Champagne Vranken-Pommery, suivie d'un dîner dans ce cadre merveilleux.<br />
+                    Le lendemain ? Nous nous retrouverons pour des ateliers en petits groupes au Salon Degermann.
                 </div>
             </div>
-        </div> -->
+        </div>
         <br />
         <div class="row">
             <div class="col">
-                <div class="text-h6">Cérémonie & Gala</div>
+                <div class="text-h6">Remise des Labels et Soirée</div>
                 <div class="q-pr-md q-py-sm text-justify">
-                    A l'issue de ces deux belles journées sera organisée la cérémonie de clôture dans l'une des salles les plus chic du centre de Reims ! <br />
-                    L'occasion rêvée pour tous de faire un dernier point sur les JRF 2022 et de profiter de la soirée autour d'un somptueux gala. Nous vous y attendons nombreux !
+                    Temps fort de ce rendez-vous annuel, voici venir la cérémonie de remise des labels.<br />
+                    Les promotions 2022 de toutes les formations CMI sont attendues ce jeudi 10 novembre au Salon
+                    Degermann. Nous y applaudirons nos jeunes alumnis avant de célébrer leur arrivée dans le monde du
+                    travail autour d'un buffet. Après quoi, étudiants et alumnis sont invités à profiter de cette
+                    suptueuse salle jusqu'au bout de la nuit !<br />
+                    CMI ALUMNI et MIRAGE - CMI Reims organisent à cette occasion un dîner de gala (entrée, plat,
+                    dessert) suivi d'une soirée dansante avec DJ !
                 </div>
             </div>
             <div class="col flex flex-center m-img">
-                <img src="figure/DSC_0115_copie.jpg" alt="Remise des diplômes" width="80%" style="min-width: 300px"
+                <img src="figure/degerman1_3_160836.jpeg" alt="Salon Degermann" width="80%" style="min-width: 300px"
                     class="shadow-3">
             </div>
         </div>

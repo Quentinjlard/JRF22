@@ -5,7 +5,7 @@
         </div>
         <div class="q-pa-md">
             <div class="flex flex-center text-center">
-                <b>Votre inscription ne prend pas en compte le transport, l'hébergement est proposé en option uniquement
+                <b>Votre inscription ne prend pas en compte le transport. L'hébergement est proposé en option uniquement
                     pour les étudiants et alumni.</b>
             </div>
         </div>
