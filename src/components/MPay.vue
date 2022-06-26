@@ -6,8 +6,10 @@
         <div class="q-pa-md">
             <div class="flex flex-center text-center">
                 <b>Votre inscription ne prend pas en compte le transport. L'hébergement est proposé en option uniquement
-                    pour les étudiants et alumni.</b><br />
-                *: les professeurs sont conviés aux divers repas, seul le dîner du gala n'est pas compris dans leur tarif.
+                    pour les étudiants et alumnis.</b><br />
+                <span class="text-accent">(<span class="text-secondary">*</span>) les professeurs sont conviés aux
+                    divers repas, seul le dîner du gala n'est
+                    pas compris dans leur tarif</span>
             </div>
         </div>
         <div class="q-pa-md">
@@ -27,12 +29,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-left">Pass 2 Jours</td>
+                            <td class="text-left">Pass 2 Jours <span class="text-secondary">*</span></td>
                             <td class="text-right">0.00</td>
                             <td class="text-right">0.00</td>
                         </tr>
                         <tr>
-                            <td class="text-left">Pass 1 Jour sans gala*</td>
+                            <td class="text-left">Pass 1 Jour sans gala <span class="text-secondary">*</span></td>
                             <td class="text-right">0.00</td>
                             <td class="text-right">0.00</td>
                         </tr>
@@ -42,7 +44,7 @@
                             <td class="text-right">0.00</td>
                         </tr>
                         <tr>
-                            <td class="text-left">Pass Céremonie sans gala*</td>
+                            <td class="text-left">Pass Céremonie sans gala <span class="text-secondary">*</span></td>
                             <td class="text-right">0.00</td>
                             <td class="text-right">0.00</td>
                         </tr>

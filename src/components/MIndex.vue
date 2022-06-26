@@ -45,7 +45,7 @@
         <br />
         <div class="row">
             <div class="col flex flex-center m-img">
-                <img src="figure/DSC_0115_copie.jpg" alt="Remise des diplômes" width="80%" style="min-width: 300px"
+                <img src="figure/vignoble-reims.png" alt="Vignoble de Reims" width="80%" style="min-width: 300px"
                     class="shadow-3">
             </div>
             <div class="col">
@@ -74,15 +74,16 @@
                 </div>
             </div>
             <div class="col flex flex-center m-img">
-                <img src="" alt="Image" width="80%" style="min-width: 300px" class="shadow-3">
+                <img src="figure/DSC_0115_copie.jpg" alt="Remise des diplômes" width="80%" style="min-width: 300px"
+                    class="shadow-3">
             </div>
         </div>
     </div>
     <div class="full-width q-px-lg q-py-xl">
         <div class="text-center text-h4 text-primary">Nos Partenaires</div>
-        <div class="bg-grey-3 rounded-borders q-mx-auto q-mt-md"
-            style="position: relative; max-width: 900px; min-height: 6em; overflow: hidden;">
-            <!-- les partenaires -->
+        <div class="bg-grey-3 rounded-borders q-mx-auto q-mt-md q-py-xl q-px-md" id="parts">
+            <q-img v-for="part in parts" :key="part.id" :src="part.icon" alt="Partenaire" width="120px" height="120px"
+                fit="cover" style="border-radius: 10px" />
         </div>
     </div>
     <div class="full-width q-px-lg q-py-xl" style="position: relative">
@@ -99,15 +100,39 @@
                 </div>
             </q-carousel-slide>
         </q-carousel>
-        <div class="row">
+        <br />
+        <div class="row q-mx-auto q-my-md" style="max-width: 750px" v-if="Screen.width > 600">
             <div class="col flex flex-center">
-                <q-btn label="Office du tourisme" color="primary" outline rounded ripple href="" />
+                <q-btn label="Office du tourisme" color="primary" outline rounded ripple
+                    href="https://www.reims-tourisme.com/" />
             </div>
             <div class="col flex flex-center">
-                <q-btn label="btn1" color="primary" outline rounded ripple href="" />
+                <q-btn label="Voyage Tips" color="primary" outline rounded ripple
+                    href="https://www.voyagetips.com/que-faire-a-reims/" />
             </div>
             <div class="col flex flex-center">
-                <q-btn label="btn2" color="primary" outline rounded ripple href="" />
+                <q-btn label="Trip Advisor" color="primary" outline rounded ripple
+                    href="https://www.tripadvisor.fr/Attractions-g187137-Activities-Reims_Marne_Grand_Est.html" />
+            </div>
+        </div>
+        <div class="row q-mx-auto q-mt-xl" v-else>
+            <div class="col flex flex-center">
+                <q-btn icon="check" color="primary" outline round ripple>
+                    <q-tooltip class="bg-primary text-info" anchor="top middle" self="bottom middle">Office du tourisme
+                    </q-tooltip>
+                </q-btn>
+            </div>
+            <div class="col flex flex-center">
+                <q-btn icon="check" color="primary" outline round ripple>
+                    <q-tooltip class="bg-primary text-info" anchor="top middle" self="bottom middle">Voyage Tips
+                    </q-tooltip>
+                </q-btn>
+            </div>
+            <div class="col flex flex-center">
+                <q-btn icon="check" color="primary" outline round ripple>
+                    <q-tooltip class="bg-primary text-info" anchor="top middle" self="bottom middle">Trip Advisor
+                    </q-tooltip>
+                </q-btn>
             </div>
         </div>
     </div>
@@ -120,6 +145,45 @@ import { Screen } from 'quasar'
 const bigTitle = ref('Journées du Réseau FIGURE')
 const autoplay = ref(true)
 const slide = ref(1)
+
+const parts = ref([
+    {
+        id: 1,
+        icon: 'figure/parts/apparelo.png'
+    },
+    {
+        id: 2,
+        icon: 'figure/parts/cmi-alumni.jpg'
+    },
+    {
+        id: 3,
+        icon: 'figure/parts/cmi-france.png'
+    },
+    {
+        id: 4,
+        icon: 'figure/parts/figure.png'
+    },
+    {
+        id: 5,
+        icon: 'figure/parts/grand-est.png'
+    },
+    {
+        id: 6,
+        icon: 'figure/parts/mendo.jpg'
+    },
+    {
+        id: 7,
+        icon: 'figure/parts/mirage.png'
+    },
+    {
+        id: 8,
+        icon: 'figure/parts/reims.jpg'
+    },
+    {
+        id: 9,
+        icon: 'figure/parts/urca.jpg'
+    },
+])
 
 const slides = ref([
     {
@@ -150,22 +214,21 @@ const slides = ref([
 </script>
 
 <style lang="scss">
+
 .m-img img {
     border-radius: 12px;
 }
 
-#part-list {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(180, 180, 180, .5);
-}
-
-#part-list-btn {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+#parts {
+    position: relative;
+    max-width: 900px;
+    min-height: 6em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 #apercu .row > .col {
