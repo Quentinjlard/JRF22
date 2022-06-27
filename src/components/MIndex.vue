@@ -82,8 +82,11 @@
     <div class="full-width q-px-lg q-py-xl">
         <div class="text-center text-h4 text-primary">Nos Partenaires</div>
         <div class="bg-grey-3 rounded-borders q-mx-auto q-mt-md q-py-xl q-px-md" id="parts">
-            <q-img v-for="part in parts" :key="part.id" :src="part.icon" alt="Partenaire" width="120px" height="120px" fit="cover" style="border-radius: 10px; --caption: none;" @mouseenter="show($event)" @mouseleave="hide($event)" @click="changeLocation(part.link)">
-                <div class="absolute-full text-subtitle2 flex flex-center text-center cursor-pointer" style="line-height: 90%; display: var(--caption);">{{ part.label }}</div>
+            <q-img v-for="part in parts" :key="part.id" :src="part.icon" alt="Partenaire" width="120px" height="120px"
+                fit="cover" style="border-radius: 10px; --caption: none;" @mouseenter="show($event)"
+                @mouseleave="hide($event)" @click="changeLocation(part.link)">
+                <div class="absolute-full text-subtitle2 flex flex-center text-center cursor-pointer"
+                    style="line-height: 90%; display: var(--caption);">{{ part.label }}</div>
             </q-img>
         </div>
     </div>
@@ -105,15 +108,16 @@
         <div class="row q-mx-auto q-my-md" style="max-width: 750px" v-if="Screen.width > 600">
             <div class="col flex flex-center">
                 <q-btn label="Office du tourisme" color="primary" outline rounded ripple
-                    href="https://www.reims-tourisme.com/" />
+                    href="https://www.reims-tourisme.com/" target="_blank" />
             </div>
             <div class="col flex flex-center">
                 <q-btn label="Voyage Tips" color="primary" outline rounded ripple
-                    href="https://www.voyagetips.com/que-faire-a-reims/" />
+                    href="https://www.voyagetips.com/que-faire-a-reims/" target="_blank" />
             </div>
             <div class="col flex flex-center">
                 <q-btn label="Trip Advisor" color="primary" outline rounded ripple
-                    href="https://www.tripadvisor.fr/Attractions-g187137-Activities-Reims_Marne_Grand_Est.html" />
+                    href="https://www.tripadvisor.fr/Attractions-g187137-Activities-Reims_Marne_Grand_Est.html"
+                    target="_blank" />
             </div>
         </div>
         <div class="row q-mx-auto q-mt-xl" v-else>
@@ -159,9 +163,9 @@ const slide = ref(1)
 const parts = ref([
     {
         id: 1,
-        icon: 'figure/parts/apparelo.png',
-        label: 'Apparelo',
-        link: 'https://www.apparelo.com/'
+        icon: 'figure/parts/figure.png',
+        label: 'Réseau FIGURE',
+        link: 'https://reseau-figure.fr/'
     },
     {
         id: 2,
@@ -171,15 +175,15 @@ const parts = ref([
     },
     {
         id: 3,
-        icon: 'figure/parts/cmi-france.png', 
-        label: 'CMI France',
-        link: 'http://cmifrance.fr/'
+        icon: 'figure/parts/mirage.png',
+        label: 'Master en Ingénierie de Reims, Association Générale des Etudiants',
+        link: 'https://mirage-cmi-reims.fr/'
     },
     {
         id: 4,
-        icon: 'figure/parts/figure.png',
-        label: 'Réseau FIGURE',
-        link: 'https://reseau-figure.fr/'
+        icon: 'figure/parts/cmi-france.png', 
+        label: 'CMI France',
+        link: 'http://cmifrance.fr/'
     },
     {
         id: 5,
@@ -189,27 +193,27 @@ const parts = ref([
     },
     {
         id: 6,
-        icon: 'figure/parts/mendo.jpg',
-        label: 'Mendo',
-        link: 'https://www.instagram.com/mendosuitsparis/?hl=fr'
-    },
-    {
-        id: 7,
-        icon: 'figure/parts/mirage.png',
-        label: 'Master en Ingénierie de Reims, Association Générale des Etudiants',
-        link: 'https://mirage-cmi-reims.fr/'
-    },
-    {
-        id: 8,
         icon: 'figure/parts/reims.jpg',
         label: 'Ville de Reims',
         link: 'https://www.reims.fr/'
     },
     {
-        id: 9,
+        id: 7,
         icon: 'figure/parts/urca.jpg',
         label: 'Université de Reims Champagne Ardennes', 
         link: 'https://www.univ-reims.fr/'
+    },
+    {
+        id: 8,
+        icon: 'figure/parts/apparelo.png',
+        label: 'Apparelo',
+        link: 'https://www.apparelo.com/'
+    },
+    {
+        id: 9,
+        icon: 'figure/parts/mendo.jpg',
+        label: 'Mendo',
+        link: 'https://www.instagram.com/mendosuitsparis/?hl=fr'
     },
 ])
 
@@ -241,7 +245,11 @@ const slides = ref([
 ])
 
 function changeLocation(url: string): void {
-    window.location.href = url
+    const button = document.createElement('a') as HTMLAnchorElement
+    button.href = url
+    button.target = '_blank'
+    button.click()
+    button.remove()
 }
 
 function show(event: unknown): void {
