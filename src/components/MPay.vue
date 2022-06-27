@@ -5,11 +5,13 @@
         </div>
         <div class="q-pa-md">
             <div class="flex flex-center text-center">
-                <b>Votre inscription ne prend pas en compte le transport. L'hébergement est proposé en option uniquement
-                    pour les étudiants et alumnis.</b><br />
-                <span class="text-accent">(<span class="text-secondary">*</span>) les professeurs sont conviés aux
-                    divers repas, seul le dîner du gala n'est
-                    pas compris dans leur tarif</span>
+                <p>
+                    <b>Votre inscription ne prend pas en compte le transport. L'hébergement est proposé en option uniquement
+                        pour les étudiants et alumnis.</b><br />
+                    <span class="text-accent">(<span class="text-secondary">*</span>) les professeurs sont conviés aux
+                        divers repas, seul le dîner du gala n'est
+                        pas compris dans leur tarif</span>
+                </p>
             </div>
         </div>
         <div class="q-pa-md">

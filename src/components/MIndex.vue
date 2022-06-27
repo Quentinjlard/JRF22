@@ -179,7 +179,7 @@ const parts = ref([
     },
     {
         id: 5,
-        icon: 'figure/parts/grand-est.png',
+        icon: 'figure/parts/grand-est.jpg',
         label: 'Région Grand Est'
     },
     {
