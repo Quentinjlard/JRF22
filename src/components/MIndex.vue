@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col">
                 <div class="text-h6">Réseau & Vie associative</div>
-                <div class="q-pr-md q-py-sm text-justify">
+                <div class="q-py-sm text-justify">
                     Cette année, nous nous donnons rendez-vous pour les 10 ans du Réseau FIGURE, du mercredi 8 au jeudi
                     9 novembre à Reims, la cité des sacres.<br /> Nous aurons l’opportunité de découvrir plusieurs lieux
                     emblématiques de la ville. Organisée par le Réseau FIGURE, l'Université de Reims, l'association
@@ -50,7 +50,7 @@
             </div>
             <div class="col">
                 <div class="text-h6 text-right">Activités & Visites</div>
-                <div class="text-justify q-pl-md q-py-sm">
+                <div class="text-justify q-py-sm">
                     Suite au bilan du Réseau, nous nous laisserons emporter pars des témoignages de la formation et du
                     rôle d'ingénieur en Europe et dans le reste du monde !<br />
                     Et puisque 10 ans ça se fête, nous avons prévu une expérience 100% rémoise : la visite des caves de
@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col">
                 <div class="text-h6">Remise des Labels et Soirée</div>
-                <div class="q-pr-md q-py-sm text-justify">
+                <div class="q-py-sm text-justify">
                     Temps fort de ce rendez-vous annuel, voici venir la cérémonie de remise des labels.<br />
                     Les promotions 2022 de toutes les formations CMI sont attendues ce jeudi 10 novembre au Salon
                     Degermann. Nous y applaudirons nos jeunes alumnis avant de célébrer leur arrivée dans le monde du
@@ -82,8 +82,9 @@
     <div class="full-width q-px-lg q-py-xl">
         <div class="text-center text-h4 text-primary">Nos Partenaires</div>
         <div class="bg-grey-3 rounded-borders q-mx-auto q-mt-md q-py-xl q-px-md" id="parts">
-            <q-img v-for="part in parts" :key="part.id" :src="part.icon" alt="Partenaire" width="120px" height="120px"
-                fit="cover" style="border-radius: 10px" />
+            <q-img v-for="part in parts" :key="part.id" :src="part.icon" alt="Partenaire" width="120px" height="120px" fit="cover" style="border-radius: 10px; --caption: none;" @mouseenter="show($event)" @mouseleave="hide($event)">
+                <div class="absolute-full text-subtitle2 flex flex-center text-center cursor-pointer" style="line-height: 90%; display: var(--caption);">{{ part.label }}</div>
+            </q-img>
         </div>
     </div>
     <div class="full-width q-px-lg q-py-xl" style="position: relative">
@@ -117,22 +118,31 @@
         </div>
         <div class="row q-mx-auto q-mt-xl" v-else>
             <div class="col flex flex-center">
-                <q-btn icon="check" color="primary" outline round ripple>
+                <q-btn icon="info" color="primary" outline round ripple
+                    @click="changeLocation('https://www.reims-tourisme.com/')">
                     <q-tooltip class="bg-primary text-info" anchor="top middle" self="bottom middle">Office du tourisme
                     </q-tooltip>
                 </q-btn>
             </div>
             <div class="col flex flex-center">
-                <q-btn icon="check" color="primary" outline round ripple>
+                <q-btn icon="mode_of_travel" color="primary" outline round ripple
+                    @click="changeLocation('https://www.voyagetips.com/que-faire-a-reims/')">
                     <q-tooltip class="bg-primary text-info" anchor="top middle" self="bottom middle">Voyage Tips
                     </q-tooltip>
                 </q-btn>
             </div>
             <div class="col flex flex-center">
-                <q-btn icon="check" color="primary" outline round ripple>
+                <q-btn icon="flutter_dash" color="primary" outline round ripple
+                    @click="changeLocation('https://www.tripadvisor.fr/Attractions-g187137-Activities-Reims_Marne_Grand_Est.html')">
                     <q-tooltip class="bg-primary text-info" anchor="top middle" self="bottom middle">Trip Advisor
                     </q-tooltip>
                 </q-btn>
+            </div>
+        </div>
+        <div v-if="Screen.width < 600">
+            <div class="text-center q-mt-md" v-if="Platform.has.touch">Maintenez votre doigt sur les boutons pour voir
+                apparaître le tooltip.</div>
+            <div class="text-center q-mt-md" v-else>Passer votre souris sur les boutons pour voir apparaître le tooltip.
             </div>
         </div>
     </div>
@@ -140,7 +150,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Screen } from 'quasar'
+import { Screen, Platform } from 'quasar'
 
 const bigTitle = ref('Journées du Réseau FIGURE')
 const autoplay = ref(true)
@@ -149,39 +159,48 @@ const slide = ref(1)
 const parts = ref([
     {
         id: 1,
-        icon: 'figure/parts/apparelo.png'
+        icon: 'figure/parts/apparelo.png',
+        label: 'Apparelo'
     },
     {
         id: 2,
-        icon: 'figure/parts/cmi-alumni.jpg'
+        icon: 'figure/parts/cmi-alumni.jpg',
+        label: 'CMI Alumni'
     },
     {
         id: 3,
-        icon: 'figure/parts/cmi-france.png'
+        icon: 'figure/parts/cmi-france.png', 
+        label: 'CMI France'
     },
     {
         id: 4,
-        icon: 'figure/parts/figure.png'
+        icon: 'figure/parts/figure.png',
+        label: 'Réseau FIGURE'
     },
     {
         id: 5,
-        icon: 'figure/parts/grand-est.png'
+        icon: 'figure/parts/grand-est.png',
+        label: 'Région Grand Est'
     },
     {
         id: 6,
-        icon: 'figure/parts/mendo.jpg'
+        icon: 'figure/parts/mendo.jpg',
+        label: 'Mendo'
     },
     {
         id: 7,
-        icon: 'figure/parts/mirage.png'
+        icon: 'figure/parts/mirage.png',
+        label: 'Master en Ingénierie de Reims, Association Générale des Etudiants'
     },
     {
         id: 8,
-        icon: 'figure/parts/reims.jpg'
+        icon: 'figure/parts/reims.jpg',
+        label: 'Ville de Reims'
     },
     {
         id: 9,
-        icon: 'figure/parts/urca.jpg'
+        icon: 'figure/parts/urca.jpg',
+        label: 'Université de Reims Champagne Ardennes'
     },
 ])
 
@@ -211,6 +230,24 @@ const slides = ref([
         text: 'A la découverte du centre ville : Place Royale, Le Forum, et plein d\'autres endroits vous attendent...'
     },
 ])
+
+function changeLocation(url: string): void {
+    window.location.href = url
+}
+
+function show(event: unknown): void {
+    if (event instanceof MouseEvent) {
+        const target = event.target as HTMLElement
+        target.style.setProperty('--caption', 'flex')
+    }
+}
+
+function hide(event: unknown): void {
+    if (event instanceof MouseEvent) {
+        const target = event.target as HTMLElement
+        target.style.setProperty('--caption', 'none')
+    }
+}
 </script>
 
 <style lang="scss">
@@ -238,6 +275,10 @@ const slides = ref([
 #apercu .row {
     align-items: center;
     flex-direction: column;
+}
+
+#apercu img {
+    margin: 16px 0;
 }
 
 #m-head-container > div:not(.m-illustration-container) {
