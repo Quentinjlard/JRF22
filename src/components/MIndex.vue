@@ -82,7 +82,7 @@
     <div class="full-width q-px-lg q-py-xl">
         <div class="text-center text-h4 text-primary">Nos Partenaires</div>
         <div class="bg-grey-3 rounded-borders q-mx-auto q-mt-md q-py-xl q-px-md" id="parts">
-            <q-img v-for="part in parts" :key="part.id" :src="part.icon" alt="Partenaire" width="120px" height="120px" fit="cover" style="border-radius: 10px; --caption: none;" @mouseenter="show($event)" @mouseleave="hide($event)">
+            <q-img v-for="part in parts" :key="part.id" :src="part.icon" alt="Partenaire" width="120px" height="120px" fit="cover" style="border-radius: 10px; --caption: none;" @mouseenter="show($event)" @mouseleave="hide($event)" @click="changeLocation(part.link)">
                 <div class="absolute-full text-subtitle2 flex flex-center text-center cursor-pointer" style="line-height: 90%; display: var(--caption);">{{ part.label }}</div>
             </q-img>
         </div>
@@ -160,47 +160,56 @@ const parts = ref([
     {
         id: 1,
         icon: 'figure/parts/apparelo.png',
-        label: 'Apparelo'
+        label: 'Apparelo',
+        link: 'https://www.apparelo.com/'
     },
     {
         id: 2,
         icon: 'figure/parts/cmi-alumni.jpg',
-        label: 'CMI Alumni'
+        label: 'CMI Alumni',
+        link: 'https://cmi-alumni.fr/'
     },
     {
         id: 3,
         icon: 'figure/parts/cmi-france.png', 
-        label: 'CMI France'
+        label: 'CMI France',
+        link: 'http://cmifrance.fr/'
     },
     {
         id: 4,
         icon: 'figure/parts/figure.png',
-        label: 'Réseau FIGURE'
+        label: 'Réseau FIGURE',
+        link: 'https://reseau-figure.fr/'
     },
     {
         id: 5,
         icon: 'figure/parts/grand-est.jpg',
-        label: 'Région Grand Est'
+        label: 'Région Grand Est',
+        link: 'https://www.grandest.fr/'
     },
     {
         id: 6,
         icon: 'figure/parts/mendo.jpg',
-        label: 'Mendo'
+        label: 'Mendo',
+        link: 'https://www.instagram.com/mendosuitsparis/?hl=fr'
     },
     {
         id: 7,
         icon: 'figure/parts/mirage.png',
-        label: 'Master en Ingénierie de Reims, Association Générale des Etudiants'
+        label: 'Master en Ingénierie de Reims, Association Générale des Etudiants',
+        link: 'https://mirage-cmi-reims.fr/'
     },
     {
         id: 8,
         icon: 'figure/parts/reims.jpg',
-        label: 'Ville de Reims'
+        label: 'Ville de Reims',
+        link: 'https://www.reims.fr/'
     },
     {
         id: 9,
         icon: 'figure/parts/urca.jpg',
-        label: 'Université de Reims Champagne Ardennes'
+        label: 'Université de Reims Champagne Ardennes', 
+        link: 'https://www.univ-reims.fr/'
     },
 ])
 
